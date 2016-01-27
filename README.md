@@ -1,4 +1,4 @@
-"# chef-wowza"
+# chef-wowza
 
 knife solo prepare root@HOST -P 'PASS'
 
