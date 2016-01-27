@@ -1,5 +1,13 @@
 "# chef-wowza"
 
+knife solo prepare root@HOST -P 'PASS'
+
+vim nodes/192.168.0.104.json
+
+knife solo cook root@HOST -P 'PASS'
+
+
+
 chef-wowza Cookbook
 ===================
 TODO: Enter the cookbook description here.
