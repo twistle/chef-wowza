@@ -42,7 +42,7 @@ end
 # Run expect script, which runs Wowza installer
 execute 'expect script' do
   command '/root/script.exp'
-  not_if 'ls /usr/local/WowzaStreamingEngine/conf/Server.license'
+  not_if '/bin/ls /usr/local/WowzaStreamingEngine/conf/Server.license'
 end
 
 # Restart Wowza
