@@ -1,5 +1,3 @@
-# chef-wowza
-
 chef-wowza Cookbook
 ===================
 This cookbook automates the installation of the Wowza Media Server 4.3.0, including their installer, which contains a very long EULA, and 5 interactive prompts.
@@ -39,12 +37,19 @@ Just include `chef-wowza` in your node's `run_list`:
 ```
 knife solo cook root@HOST -P 'PASS'
 ```
+Wowza needs several user actions on the interactive prompt portion of the installer:
+- an acknowledgement of acceptance of their terms
+- an administrative user added for using the Wowza console
+- a password for the administrative user
+- confirmation of that password
+- Wowza license key
+- an acknowledgement of whether or not you want Wowza to start at boot
+
+Those values can be edited in the template/script.exp.erb file.
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
