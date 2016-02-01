@@ -1,57 +1,31 @@
 # chef-wowza
 
-Wowza 4.3.0
-Tested on CentOS 6.7
-
-   knife solo prepare root@HOST -P 'PASS'
-
-   vim nodes/HOST.json
-
-   knife solo cook root@HOST -P 'PASS'
-
-
 chef-wowza Cookbook
 ===================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook automates the installation of the Wowza Media Server 4.3.0, including their installer, which contains a very long EULA, and 5 interactive prompts.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - chef-wowza needs toaster to brown your bagel.
+- Tested on CentOS 6.7
+- Java jdk - openjdk will be just fine.
+- Wowza license - this you will get when you sign up for a free trial, or you can request a developer license.
+- Wowza binary - the Wowza binary (4.3.0) is now wgetted as part of this role.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### chef-wowza::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['chef-wowza']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+```
+default['wowza_version'] = "WowzaStreamingEngine-4.3.0-linux-x64-installer.run"
+default['user_name'] = "admin"
+default['password'] = "admin"
+default['license_key'] = "XXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXXXX"
+```
 
 Usage
 -----
-#### chef-wowza::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
+Install knife-solo
+```
+knife solo prepare root@HOST -P 'PASS'
+```
 Just include `chef-wowza` in your node's `run_list`:
 
 ```json
@@ -61,6 +35,9 @@ Just include `chef-wowza` in your node's `run_list`:
     "recipe[chef-wowza]"
   ]
 }
+```
+```
+knife solo cook root@HOST -P 'PASS'
 ```
 
 Contributing
