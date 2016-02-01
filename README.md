@@ -1,11 +1,13 @@
 # chef-wowza
 
-knife solo prepare root@HOST -P 'PASS'
+Wowza 4.3.0
+Tested on Ubuntu server 14.04
 
-vim nodes/192.168.0.104.json
+  knife solo prepare root@HOST -P 'PASS'
 
-knife solo cook root@HOST -P 'PASS'
+  vim nodes/HOST.json
 
+  knife solo cook root@HOST -P 'PASS'
 
 
 chef-wowza Cookbook
