@@ -3,11 +3,11 @@
 Wowza 4.3.0
 Tested on Ubuntu server 14.04
 
-  knife solo prepare root@HOST -P 'PASS'
+   knife solo prepare root@HOST -P 'PASS'
 
-  vim nodes/HOST.json
+   vim nodes/HOST.json
 
-  knife solo cook root@HOST -P 'PASS'
+   knife solo cook root@HOST -P 'PASS'
 
 
 chef-wowza Cookbook
