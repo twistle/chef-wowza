@@ -3,9 +3,9 @@ chef-wowza CHANGELOG
 
 This file is used to list changes made in each version of the chef-wowza cookbook.
 
-0.1.0
+0.2.0
 -----
-- [your_name] - Initial release of chef-wowza
+- msergiy87 - Initial release of chef-wowza
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
