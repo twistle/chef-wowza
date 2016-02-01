@@ -24,7 +24,7 @@ end
 
 # Download package Wowza
 remote_file "/root/#{node['wowza_version']}" do
-  source "http://ispc-test.kpi.ua/my/#{wowza_version}"
+  source "https://www.wowza.com/downloads/WowzaStreamingEngine-4-3-0/#{wowza_version}"
   owner "root"
   group "root"
   mode "0755"
