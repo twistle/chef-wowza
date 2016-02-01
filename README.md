@@ -25,7 +25,9 @@ Install knife-solo
 knife solo prepare root@HOST -P 'PASS'
 ```
 Just include `chef-wowza` in your node's `run_list`:
-
+```
+vim nodes/192.168.0.104.json
+```
 ```json
 {
   "name":"my_node",
