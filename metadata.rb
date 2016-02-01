@@ -1,6 +1,6 @@
 name             'chef-wowza'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'msergiy87'
+maintainer_email 'sergiy_007@ukr.net'
 license          'All rights reserved'
 description      'Automate installation of Wowza Media Server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
