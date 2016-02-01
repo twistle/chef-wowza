@@ -10,4 +10,4 @@
 default['wowza_version'] = "WowzaStreamingEngine-4.3.0-linux-x64-installer.run"
 default['user_name'] = "admin"
 default['password'] = "admin"
-default['license_key'] = "ET1A4-6FRDC-4Adne-YyCb4-NWcRj-DJ66B-46ythbjpdAWc"
+default['license_key'] = "XXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXXXX"
