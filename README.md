@@ -4,7 +4,7 @@ This cookbook automates the installation of the Wowza Media Server 4.3.0, includ
 
 Requirements
 ------------
-- Tested on CentOS 6.7
+- CentOS 6.7
 - Java jdk - openjdk will be just fine.
 - Wowza license - this you will get when you sign up for a free trial, or you can request a developer license.
 - Wowza binary - the Wowza binary (4.3.0) is now wgetted as part of this role.
