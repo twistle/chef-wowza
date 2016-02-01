@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the chef-wowza cookboo
 
 0.2.0
 -----
-- msergiy87 - Initial release of chef-wowza
+- msergiy87 - install new Wowza 4.3.0 and related changes
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
