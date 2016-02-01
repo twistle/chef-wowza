@@ -1,7 +1,7 @@
 # chef-wowza
 
 Wowza 4.3.0
-Tested on Ubuntu server 14.04
+Tested on CentOS 6.7
 
    knife solo prepare root@HOST -P 'PASS'
 
