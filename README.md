@@ -1,18 +1,19 @@
 chef-wowza Cookbook
 ===================
-This cookbook automates the installation of the Wowza Media Server 4.3.0, including their installer, which contains a very long EULA, and 5 interactive prompts.
+This cookbook automates the installation of the Wowza Media Server 4.4.1, including their installer, which contains a very long EULA, and 5 interactive prompts.
 
 Requirements
 ------------
 - CentOS 6.7
 - Java jdk - openjdk will be just fine.
 - Wowza license - this you will get when you sign up for a free trial, or you can request a developer license.
-- Wowza binary - the Wowza binary (4.3.0) is now wgetted as part of this role.
+- Wowza binary - the Wowza binary (4.4.1) is now wgetted as part of this role.
 
 Attributes
 ----------
 ```
-default['wowza_version'] = "WowzaStreamingEngine-4.3.0-linux-x64-installer.run"
+default['wowza_file'] = "WowzaStreamingEngine-4.4.1-linux-x64-installer.run"
+default['wowza_download_path'] = "WowzaStreamingEngine-4-4-1"
 default['user_name'] = "admin"
 default['password'] = "admin"
 default['license_key'] = "XXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXXXX"
