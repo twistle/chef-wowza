@@ -7,8 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-wowza_version = node['wowza_version']
-wowza_path = "/root/#{wowza_version}"
+wowza_file = node['wowza_file']
+wowza_path = "/root/#{wowza_file}"
 
 #backup_dir = "/var/backup/#{node['hostname']}"
 
@@ -23,8 +23,8 @@ package ['java-1.7.0-openjdk-devel', 'expect'] do
 end
 
 # Download package Wowza
-remote_file "/root/#{node['wowza_version']}" do
-  source "https://www.wowza.com/downloads/WowzaStreamingEngine-4-3-0/#{wowza_version}"
+remote_file "/root/#{node['wowza_file']}" do
+  source "https://www.wowza.com/downloads/#{wowza_download_path}/#{wowza_file}"
   owner "root"
   group "root"
   mode "0755"
