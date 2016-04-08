@@ -9,6 +9,7 @@
 
 wowza_file = node['wowza_file']
 wowza_path = "/root/#{wowza_file}"
+wowza_download_path = node['wowza_download_path']
 
 #backup_dir = "/var/backup/#{node['hostname']}"
 
@@ -24,7 +25,7 @@ end
 
 # Download package Wowza
 remote_file "/root/#{node['wowza_file']}" do
-  source "http://www.wowza.com/downloads/#{wowza_download_path}/#{wowza_file}"
+  source "#{wowza_download_path}/#{wowza_file}"
   owner "root"
   group "root"
   mode "0755"
