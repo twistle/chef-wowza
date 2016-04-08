@@ -39,6 +39,7 @@ git clone https://github.com/msergiy87/chef-wowza.git
 
 ##### 3) Prepare host
 ```shell
+cd ~/my_deploy_code
 knife solo prepare root@HOST -P 'PASS'
 ```
 
