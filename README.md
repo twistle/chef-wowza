@@ -45,7 +45,7 @@ knife solo prepare root@HOST -P 'PASS'
 
 ##### 4) Include `chef-wowza` in your node's `run_list`:
 ```shell
-vim nodes/192.168.0.104.json
+vim nodes/192.168.0.103.json
 ```
 ```json
 {
@@ -57,11 +57,28 @@ vim nodes/192.168.0.104.json
   }
 }
 ```
+##### 5) Add license key
+```shell
+vim site-cookbooks/chef-wowza/attributes/default.rb
+default['license_key'] = "insert key between quotations"
+```
 
-##### 5) Cook
+##### 6) Cook
 ```shell
 knife solo cook root@HOST -P 'PASS'
 ```
+
+##### 7) Add iptables rules
+```shell
+iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
+iptables -I INPUT -p tcp --dport 8088 -j ACCEPT
+```
+
+##### 8) Run web interface
+```
+http://192.168.0.103/enginemanager
+```
+
 Wowza needs several user actions on the interactive prompt portion of the installer:
 - an acknowledgement of acceptance of their terms
 - an administrative user added for using the Wowza console
