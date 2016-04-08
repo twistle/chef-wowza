@@ -13,30 +13,51 @@ Attributes
 ----------
 ```
 default['wowza_file'] = "WowzaStreamingEngine-4.4.1-linux-x64-installer.run"
-default['wowza_download_path'] = "WowzaStreamingEngine-4-4-1"
+default['wowza_download_path'] = "http://www.wowza.com/downloads/WowzaStreamingEngine-4-4-1"
 default['user_name'] = "admin"
 default['password'] = "admin"
-default['license_key'] = "XXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXXXX"
+default['license_key'] = "insert key between quotations"
 ```
 
 Usage
 -----
-Install knife-solo
+##### 1) Install knife-solo
+```
+apt-get update
+curl -L https://www.opscode.com/chef/install.sh | sudo bash
+/opt/chef/embedded/bin/gem install knife-solo --no-ri --no-rdoc
+```
+
+##### 2) Clone repository
+```
+mkdir ~/my_deploy_code
+cd ~/my_deploy_code
+knife solo init .
+cd site-cookbooks/
+git clone https://github.com/msergiy87/chef-wowza.git
+```
+
+##### 3) Prepare host
 ```
 knife solo prepare root@HOST -P 'PASS'
 ```
-Just include `chef-wowza` in your node's `run_list`:
+
+##### 4) Include `chef-wowza` in your node's `run_list`:
 ```
 vim nodes/192.168.0.104.json
 ```
 ```json
 {
-  "name":"my_node",
   "run_list": [
     "recipe[chef-wowza]"
-  ]
+  ],
+  "automatic": {
+    "ipaddress": "192.168.0.103"
+  }
 }
 ```
+
+##### 5) Cook
 ```
 knife solo cook root@HOST -P 'PASS'
 ```
