@@ -22,14 +22,14 @@ default['license_key'] = "insert key between quotations"
 Usage
 -----
 ##### 1) Install knife-solo
-```
+```shell
 apt-get update
 curl -L https://www.opscode.com/chef/install.sh | sudo bash
 /opt/chef/embedded/bin/gem install knife-solo --no-ri --no-rdoc
 ```
 
 ##### 2) Clone repository
-```
+```shell
 mkdir ~/my_deploy_code
 cd ~/my_deploy_code
 knife solo init .
@@ -38,12 +38,12 @@ git clone https://github.com/msergiy87/chef-wowza.git
 ```
 
 ##### 3) Prepare host
-```
+```shell
 knife solo prepare root@HOST -P 'PASS'
 ```
 
 ##### 4) Include `chef-wowza` in your node's `run_list`:
-```
+```shell
 vim nodes/192.168.0.104.json
 ```
 ```json
@@ -58,7 +58,7 @@ vim nodes/192.168.0.104.json
 ```
 
 ##### 5) Cook
-```
+```shell
 knife solo cook root@HOST -P 'PASS'
 ```
 Wowza needs several user actions on the interactive prompt portion of the installer:
