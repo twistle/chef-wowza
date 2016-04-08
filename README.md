@@ -1,20 +1,19 @@
 chef-wowza Cookbook
 ===================
 
-Ansible role for Wowza 4.4.1
+Cookbook for Wowza 4.4.1
 ------------
 
 This cookbook automates the installation of the Wowza Media Server 4.4.1, including their installer, which contains a very long EULA, and 5 interactive prompts.
 
 Requirements
 ------------
-- CentOS 6.7
 - Java jdk - openjdk will be just fine.
 - Wowza license - this you will get when you sign up for a free trial, or you can request a developer license.
 - Wowza binary - the Wowza binary (4.4.1) is now wgetted as part of this role.
 
 Attributes
-----------
+------------
 ```
 default['wowza_file'] = "WowzaStreamingEngine-4.4.1-linux-x64-installer.run"
 default['wowza_download_path'] = "http://www.wowza.com/downloads/WowzaStreamingEngine-4-4-1"
@@ -23,8 +22,12 @@ default['password'] = "admin"
 default['license_key'] = "insert key between quotations"
 ```
 
+Distros tested
+----------
+Currently, this is only tested on Ubuntu 14.04. It should theoretically work on older versions of Ubuntu or Debian based systems.
+
 Usage
------
+------------
 ##### 1) Install knife-solo
 ```shell
 apt-get update
