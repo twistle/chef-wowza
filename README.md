@@ -24,7 +24,15 @@ default['license_key'] = "insert key between quotations"
 
 Distros tested
 ----------
-Currently, this is only tested on Ubuntu 14.04. It should theoretically work on older versions of Ubuntu or Debian based systems.
+Currently, this is only tested on Centos 6.7.
+
+Wait a minute, what the hell is Wowza?
+------------
+From the Wowza site:
+
+_Wowza Streaming Engine™ is robust, customizable media server software that powers reliable streaming of high-quality video and audio to any device, anywhere._
+
+_Wowza software is platform-agnostic, multi-format, and multi-screen. It takes in any video format, transcodes it once, and reliably delivers it in multiple formats and with the highest possible quality_
 
 Usage
 ------------
@@ -98,17 +106,3 @@ Wowza needs several user actions on the interactive prompt portion of the instal
 - an acknowledgement of whether or not you want Wowza to start at boot
 
 Those values can be edited in the template/script.exp.erb file.
-
-Contributing
-------------
-
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
