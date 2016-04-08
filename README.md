@@ -1,4 +1,4 @@
-chef-wowza Cookbook
+chef-wowza
 ===================
 
 Cookbook for Wowza 4.4.1
