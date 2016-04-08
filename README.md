@@ -57,9 +57,12 @@ vim nodes/192.168.0.103.json
   }
 }
 ```
-##### 5) Add license key
+##### 5) Add license key and change username and password
 ```shell
 vim site-cookbooks/chef-wowza/attributes/default.rb
+
+default['user_name'] = "admin"
+default['password'] = "admin"
 default['license_key'] = "insert key between quotations"
 ```
 
