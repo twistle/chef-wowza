@@ -24,7 +24,7 @@ end
 
 # Download package Wowza
 remote_file "/root/#{node['wowza_file']}" do
-  source "#{wowza_download_path}/#{wowza_file}"
+  source "http://www.wowza.com/downloads/#{wowza_download_path}/#{wowza_file}"
   owner "root"
   group "root"
   mode "0755"
