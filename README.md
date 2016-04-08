@@ -68,7 +68,7 @@ default['license_key'] = "insert key between quotations"
 knife solo cook root@HOST -P 'PASS'
 ```
 
-##### 7) Add iptables rules
+##### 7) Add iptables rules on server
 ```shell
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
 iptables -I INPUT -p tcp --dport 8088 -j ACCEPT
