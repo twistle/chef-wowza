@@ -38,8 +38,7 @@ Usage
 ------------
 ##### 1) Install knife-solo
 ```shell
-yum update
-yum install git
+apt-get update
 curl -L https://www.opscode.com/chef/install.sh | sudo bash
 /opt/chef/embedded/bin/gem install knife-solo --no-ri --no-rdoc
 ```
