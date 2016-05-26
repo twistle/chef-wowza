@@ -24,7 +24,7 @@ default['license_key'] = "insert key between quotations"
 
 Distros tested
 ----------
-Currently, this is only tested on Centos 6.7.
+Currently, this is only tested on Centos 6.7 as a client machine and Ubuntu 14.04 as a server machime.
 
 Wait a minute, what the hell is Wowza?
 ------------
