@@ -18,8 +18,8 @@ execute 'yum update -y' do
   command 'yum update -y'
 end
 
-# Install OpenJDK 7 JDK, expect
-package ['java-1.7.0-openjdk-devel', 'expect'] do
+# Install OpenJDK JDK, expect
+package ['java-1.8.0-openjdk-devel', 'expect'] do
   action :install
 end
 
