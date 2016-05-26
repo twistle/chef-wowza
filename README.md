@@ -4,7 +4,7 @@ chef-wowza
 Cookbook for Wowza 4.4.1
 ------------
 
-This cookbook automates the installation of the Wowza Media Server 4.4.1, including their installer, which contains a very long EULA, and 5 interactive prompts.
+This cookbook automates the installation of the Wowza Media Server 4.4.1, including their installer, which contains a very long EULA, and 7 interactive prompts.
 
 Requirements
 ------------
