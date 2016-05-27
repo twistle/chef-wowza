@@ -1,7 +1,7 @@
 chef-wowza
 ===================
 
-![chef-wowza](https://github.com/msergiy87chef-wowza/blob/master/chef-wowza.jpg)
+![chef-wowza](https://github.com/msergiy87/chef-wowza/blob/master/chef-wowza.jpg)
 
 Cookbook for Wowza 4.4.1
 ------------
