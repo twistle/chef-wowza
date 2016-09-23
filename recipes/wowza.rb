@@ -7,30 +7,32 @@
 # All rights reserved - Do Not Redistribute
 #
 
-wowza_file = node['wowza_file']
-wowza_path = "/root/#{wowza_file}"
-wowza_download_path = node['wowza_download_path']
+wowza_file = node['wowza']['download_file']
+wowza_install_dir = "/root"
+wowza_path = "#{wowza_install_dir}/#{wowza_file}"
+wowza_download_path = node['wowza']['download_path']
 
 #backup_dir = "/var/backup/#{node['hostname']}"
 
-# Upgrade
-execute 'yum update -y' do
-  command 'yum update -y'
-end
+# install java
+include_recipe "java"
 
-# Install OpenJDK JDK, expect
-package ['java-1.8.0-openjdk-devel', 'expect'] do
-  action :install
-end
+# install expect
+package ['expect']
+
+# install wget
+package ['wget']
 
 # Download package Wowza
-remote_file "/root/#{node['wowza_file']}" do
-  source "#{wowza_download_path}/#{wowza_file}"
-  owner "root"
-  group "root"
-  mode "0755"
-  action :create_if_missing
+bash "download wowza" do
+  code <<-EOF
+        cd #{wowza_install_dir}
+        wget #{wowza_download_path}/#{wowza_file} -q
+        chmod u+x #{wowza_file}
+  EOF
+  not_if "test -e #{wowza_path}"
 end
+
 
 # Copy expect script template
 template '/root/script.exp' do

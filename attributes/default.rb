@@ -7,8 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-default['wowza_file'] = "WowzaStreamingEngine-4.4.1-linux-x64-installer.run"
-default['wowza_download_path'] = "http://www.wowza.com/downloads/WowzaStreamingEngine-4-4-1"
-default['user_name'] = "admin"
-default['password'] = "admin"
-default['license_key'] = "insert key between quotations"
+default['wowza']['download_file'] = "WowzaStreamingEngine-4.5.0-linux-x64-installer.run"
+default['wowza']['download_path'] = "https://www.wowza.com/downloads/WowzaStreamingEngine-4-5-0"
+default['wowza']['user_name'] = "admin"
+default['wowza']['password'] = "admin"
+default['wowza']['license_key'] = "insert key between quotations"

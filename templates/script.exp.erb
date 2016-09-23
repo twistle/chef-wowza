@@ -4,7 +4,7 @@
 # https://github.com/simplycycling/ansible-wowza/blob/master/templates/script.exp.j2
 
 set timeout -1
-spawn sudo /root/<%= node['wowza_file'] %>
+spawn sudo /root/<%= node['wowza']['download_file'] %>
 
 expect {
     -gl "*Press * to continue:*" { send -- "\r"; exp_continue }
@@ -12,13 +12,13 @@ expect {
 }
 send -- "y\r"
 expect -gl "*License Key:*"
-send -- "<%= node['license_key'] %>\r"
+send -- "<%= node['wowza']['license_key'] %>\r"
 expect -gl "*User Name:*"
-send -- "<%= node['user_name'] %>\r"
+send -- "<%= node['wowza']['user_name'] %>\r"
 expect -gl "*Password:*"
-send -- "<%= node['password'] %>\r"
+send -- "<%= node['wowza']['password'] %>\r"
 expect -gl "*Confirm Password:*"
-send -- "<%= node['password'] %>\r"
+send -- "<%= node['wowza']['password'] %>\r"
 expect -gl "*Start Wowza Streaming Engine automatically*"
 send -- "y\r"
 expect -gl "*Do you want to continue?*"
